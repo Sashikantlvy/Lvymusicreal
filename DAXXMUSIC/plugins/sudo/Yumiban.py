@@ -52,7 +52,7 @@ channel = ["channel"]
 # ========================================= #
 
 
-@app.on_message(filters.command(["umi","umiko"], prefixes=["y", "Y"]) & admin_filter)
+@app.on_message(filters.command(["lvy","lvy"], prefixes=["l", "L"]) & admin_filter)
 async def restriction_app(app :app, message):
     reply = message.reply_to_message
     chat_id = message.chat.id
@@ -70,7 +70,7 @@ async def restriction_app(app :app, message):
                     await message.reply(random.choice(strict_txt))          
                 else:
                     await app.ban_chat_member(chat_id, user_id)
-                    await message.reply("OK, Ban kar diya madrchod ko sala Chutiya tha !")
+                    await message.reply("OK, Ban kar diya !")
                     
         for unbanned in data:
             print(f"present {unbanned}")

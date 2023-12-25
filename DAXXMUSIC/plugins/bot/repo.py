@@ -22,7 +22,14 @@ async def start(_, msg):
           ],
                [
                 InlineKeyboardButton("ʀᴇᴘᴏ", url="https://telegra.ph/file/78be765f35211e764a9d5.mp4"),
-]]
+]
+        [
+          InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/statusdairy2"),
+    ] 
+        [
+          InlineKeyboardButton("˹ѕᴄαꝛ ꭙ ꝛσʙσᴛ˼", url="https://t.me/SCAR_X_ROBOT?startgroup=true"),
+          InlineKeyboardButton("˹νσн ꭙ мυѕιᴄ˼🥀", url="https://t.me/VOH_MUSIC_BOT?startgroup=true")
+    ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     

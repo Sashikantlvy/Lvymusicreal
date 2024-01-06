@@ -1,34 +1,40 @@
 from pyrogram import filters
+from pyrogram.enums import ChatType
 from pyrogram.errors import MessageNotModified
-from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
-                            InlineKeyboardMarkup, Message)
+from pyrogram.types import (
+    CallbackQuery,
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    Message,
+)
 
-from DAXXMUSIC.utilities.config import (BANNED_USERS, CLEANMODE_DELETE_MINS,
-                    MUSIC_BOT_NAME, OWNER_ID)
-from DAXXMUSIC.utilities.strings import get_command
-from DAXXMUSIC import bot
-from DAXXMUSIC.modules.main.database import (add_nonadmin_chat,
-                                       cleanmode_off, cleanmode_on,
-                                       commanddelete_off,
-                                       commanddelete_on,
-                                       get_aud_bit_name, get_authuser,
-                                       get_authuser_names,
-                                       get_playmode, get_playtype,
-                                       get_vid_bit_name,
-                                       is_cleanmode_on,
-                                       is_commanddelete_on,
-                                       is_nonadmin_chat,
-                                       remove_nonadmin_chat,
-                                       save_audio_bitrate,
-                                       save_video_bitrate,
-                                       set_playmode, set_playtype)
-from DAXXMUSIC.modules.main.decorators.admins import ActualAdminCB
-from DAXXMUDIC.modules.main.decorators.language import language, languageCB
-from DAXXMUDIC.utilities.inline.settings import (
-    audio_quality_markup, auth_users_markup,
-    cleanmode_settings_markup, playmode_users_markup, setting_markup,
-    video_quality_markup)
-from SankiMusic.utilities.inline.start import private_panel
+from DAXXMUSIC import app
+from DAXXMUSIC.utils.database import (
+    add_nonadmin_chat,
+    get_authuser,
+    get_authuser_names,
+    get_playmode,
+    get_playtype,
+    get_upvote_count,
+    is_nonadmin_chat,
+    is_skipmode,
+    remove_nonadmin_chat,
+    set_playmode,
+    set_playtype,
+    set_upvotes,
+    skip_off,
+    skip_on,
+)
+from DAXXMUSIC.utils.decorators.admins import ActualAdminCB
+from DAXXMUSIC.utils.decorators.language import language, languageCB
+from DAXXMUSIC.utils.inline.settings import (
+    auth_users_markup,
+    playmode_users_markup,
+    setting_markup,
+    vote_mode_markup,
+)
+from DAXXMUSIC.utils.inline.start import private_panel
+from config import BANNED_USERS, OWNER_ID
 
 ### Command
 SETTINGS_COMMAND = get_command("SETTINGS_COMMAND")

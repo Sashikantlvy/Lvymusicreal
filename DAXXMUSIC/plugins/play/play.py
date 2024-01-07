@@ -650,7 +650,7 @@ async def slider_queries(client, CallbackQuery, _):
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
-        ):
+        )
   
         if not await is_served_user(message.from_user.id):
         await message.reply_text(

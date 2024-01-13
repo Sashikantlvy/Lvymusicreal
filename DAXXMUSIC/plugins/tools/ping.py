@@ -63,7 +63,7 @@ async def ping_com(client, message: Message, _):
             [
                 [
             InlineKeyboardButton(
-                text=_["ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ʙᴀʙʏ"],
+                text=_["S_B_5"],
                 url=f"https://t.me/{app.username}?startgroup=true",
             )
         

@@ -131,6 +131,12 @@ def help_pannel(_, START: Union[bool, int] = None):
                 ),
                
             ],
+            [
+              InlineKeyboardButton(
+                    text=_["S_B_5"],
+                    url="https://t.me/ABOUT_SASHIKANT",
+                ),
+            ],
             mark,
         ]
     )

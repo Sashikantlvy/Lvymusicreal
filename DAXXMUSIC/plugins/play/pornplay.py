@@ -17,14 +17,14 @@ from DAXXMUSIC.plugins.play.pornplay import play
 keyboard = InlineKeyboardMarkup([
         [
             InlineKeyboardButton("⊝ ᴄʟᴏsᴇ ⊝", callback_data="close_data"), 
-            InlineKeyboardButton("⊝ ᴠᴘʟᴀʏ⊝", callback_data="play_data"),
+            InlineKeyboardButton("⊝ ᴠᴘʟᴀʏ⊝", callback_data="play"),
         ]
 ])
 
 
 # Define your callback function
-@app.on_callback_query(filters.regex("play_data"))
-async def play_callback(_, query: CallbackQuery):
+@app.on_callback_query(filters.regex("^play"))
+async def play_callback(_, query):
     # You can add more logic here before initiating playback
     await play(query.from_user.id)  # Assuming play function accepts user ID
     await query.answer("Playback started!")

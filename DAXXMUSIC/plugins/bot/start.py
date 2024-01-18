@@ -45,6 +45,16 @@ YUMI_PICS = [
 
 
 
+
+
+EMOJIOS = [ 
+      "🌿",
+      "⚡",
+      "💗",
+      "✨",
+      "🌱",
+]
+
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
 async def start_pm(client, message: Message, _):
@@ -108,8 +118,20 @@ async def start_pm(client, message: Message, _):
         served_chats = len(await get_served_chats())
         served_users = len(await get_served_users())
         UP, CPU, RAM, DISK = await bot_sys_stats()
+        await m.reply_text(
+            text = random.choice(EMOJIOS),
+        )
+        await asyncio.sleep(1)
+        await accha.edit("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠..")
+        await asyncio.sleep(0.1)
+        await accha.edit("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠...")
+        await asyncio.sleep(0.1)
+        await accha.edit("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠....")
+        await asyncio.sleep(0.1)
+        await accha.edit("𝐒𝐭𝐚𝐫𝐭𝐞𝐝.✓")
+        await asyncio.sleep(0.2)
+        await accha.edit("𝐒𝐭𝐚𝐫𝐭"),
         await message.reply_sticker("CAACAgUAAxkBAAIIb2WokDndcVBy71K855Lt5jSkvZ7yAAK1AgACioWJVgNtVr8dAAGApx4E"),
-        await message.reply_video(video="https://telegra.ph/file/9181323f79e5a90fd078a.mp4"),
         await message.reply_photo(
             random.choice(YUMI_PICS),
             caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM,served_users,served_chats),

@@ -107,8 +107,6 @@ async def start_pm(client, message: Message, _):
         served_chats = len(await get_served_chats())
         served_users = len(await get_served_users())
         UP, CPU, RAM, DISK = await bot_sys_stats()
-        text =message.text.split(None, 1)[1]
-        m =await message.reply_text( "ᴛʜᴀɴᴋ ʏᴏᴜ sᴏ ᴍᴜᴄʜ ғᴏʀ sᴛᴀʀᴛɪɴɢ ᴍᴇ💗🍃\n\nᴀᴅᴅ ɪ ʟᴏᴠᴇ ʏᴏᴜ💗✨")
         await message.reply_sticker("CAACAgUAAxkBAAIIb2WokDndcVBy71K855Lt5jSkvZ7yAAK1AgACioWJVgNtVr8dAAGApx4E"),
         await message.reply_photo(
             random.choice(YUMI_PICS),
